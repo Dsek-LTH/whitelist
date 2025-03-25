@@ -2,6 +2,7 @@ node_modules
 
 # Output
 .output
+
 .vercel
 .netlify
 .wrangler
@@ -9,7 +10,7 @@ node_modules
 /build
 
 /out
-
+/output
 /src/lib/server/db/sqlite.db
 
 # OS
