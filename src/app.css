@@ -1,0 +1,175 @@
+@import 'tailwindcss';
+@plugin "daisyui" {
+	themes: dseklight --default;
+}
+@plugin "daisyui/theme" {
+	name: 'dseknolla';
+	default: true; /* set as default */
+	prefersdark: false; /* set as default dark mode (prefers-color-scheme:dark) */
+	color-scheme: light; /* color of browser-provided UI */
+
+	--color-primary: oklch(85.48% 0.1064 340.25);
+	--color-secondary: oklch(86.86% 0.0829 307.02);
+	--color-accent: oklch(76.43% 0.1313 184.17);
+	--color-neutral: oklch(78.04% 0.0057 17.28);
+	--color-base-100: oklch(95.21% 0 0);
+	--color-info: oklch(75.85% 0.1374 231.62);
+	--color-success: oklch(77.33% 0.1529 163.1);
+	--color-warning: oklch(83.3% 0.1642 83.42);
+	--color-error: oklch(71.22% 0.1649 22.15);
+
+	/*--color-base-200: oklch(95% 0.03 240);
+	--color-base-300: oklch(92% 0.04 240);*/
+	--color-base-content: oklch(20% 0.05 240);
+	--color-primary-content: oklch(98% 0.01 240);
+	--color-secondary-content: oklch(98% 0.01 200);
+	--color-accent-content: oklch(98% 0.01 160);
+	--color-neutral-content: oklch(98% 0.01 240);
+	--color-info-content: oklch(98% 0.01 220);
+	--color-success-content: oklch(98% 0.01 140);
+	--color-warning-content: oklch(20% 0.05 80);
+	--color-error-content: oklch(98% 0.01 30);
+
+	/* border radius */
+	--radius-selector: 1rem;
+	--radius-field: 0.25rem;
+	--radius-box: 0.5rem;
+
+	/* base sizes */
+	--size-selector: 0.25rem;
+	--size-field: 0.25rem;
+
+	/* border size */
+	--border: 1px;
+
+	/* effects */
+	--depth: 1;
+	--noise: 0;
+}
+@plugin "daisyui/theme" {
+	name: 'dseklight';
+	prefersdark: false; /* set as default dark mode (prefers-color-scheme:dark) */
+	color-scheme: light; /* color of browser-provided UI */
+	default: true;
+
+	--color-primary: '#CC5E80';
+	--color-secondary: '#9966cc';
+	--color-accent: '#1fb2a6';
+	--color-neutral: '#ededed';
+	--color-base-100: '#DDDDDD';
+	--color-base-200: '#e5e5e5';
+	--color-base-300: '#ededed';
+	--color-info: '#0794d0';
+	--color-success: '#22996D';
+	--color-warning: '#e9a704';
+	--color-error: '#f64949';
+
+	/*--color-base-200: oklch(95% 0.03 240);
+	--color-base-300: oklch(92% 0.04 240);*/
+	--color-base-content: oklch(20% 0.05 240);
+	--color-primary-content: oklch(98% 0.01 240);
+	--color-secondary-content: oklch(98% 0.01 200);
+	--color-accent-content: oklch(98% 0.01 160);
+	--color-neutral-content: oklch(98% 0.01 240);
+	--color-info-content: oklch(98% 0.01 220);
+	--color-success-content: oklch(98% 0.01 140);
+	--color-warning-content: oklch(20% 0.05 80);
+	--color-error-content: oklch(98% 0.01 30);
+
+	/* border radius */
+	--radius-selector: 1rem;
+	--radius-field: 0.25rem;
+	--radius-box: 0.5rem;
+
+	/* base sizes */
+	--size-selector: 0.25rem;
+	--size-field: 0.25rem;
+
+	/* border size */
+	--border: 1px;
+
+	/* effects */
+	--depth: 1;
+	--noise: 0;
+}
+@plugin "daisyui/theme" {
+	name: 'dsekdark';
+	prefersdark: true; /* set as default dark mode (prefers-color-scheme:dark) */
+	color-scheme: dark; /* color of browser-provided UI */
+
+	--color-primary: '#f280a1';
+	--color-secondary: '#9966cc';
+	--color-accent: '#1dcdbc';
+	--color-neutral: '#1c1a1c';
+	--color-base-100: '#252225';
+	--color-base-200: '#211e21';
+	--color-base-300: '#1c1a1c';
+	--color-info: '#3abff8';
+	--color-success: '#36d399';
+	--color-warning: '#fbbd23';
+	--color-error: '#f87272';
+
+	--color-base-content: '#ffffff';
+	--color-primary-content: '#00000';
+	--color-secondary-content: oklch(98% 0.01 200);
+	--color-accent-content: oklch(98% 0.01 160);
+	--color-neutral-content: oklch(98% 0.01 240);
+	--color-info-content: oklch(98% 0.01 220);
+	--color-success-content: oklch(98% 0.01 140);
+	--color-warning-content: oklch(20% 0.05 80);
+	--color-error-content: oklch(98% 0.01 30);
+
+	/* border radius */
+	--radius-selector: 1rem;
+	--radius-field: 0.25rem;
+	--radius-box: 0.5rem;
+
+	/* base sizes */
+	--size-selector: 0.25rem;
+	--size-field: 0.25rem;
+
+	/* border size */
+	--border: 1px;
+
+	/* effects */
+	--depth: 1;
+	--noise: 0;
+}
+
+.btn-dsek {
+	outline-color: #f280a1;
+	background-color: #f280a1;
+	border-color: #cd6d88;
+	color: #000;
+	appearance: button;
+}
+.btn-dsek:hover {
+	background-color: #d5748f;
+}
+.btn-fsek {
+	outline-color: #eb7126;
+	background-color: #eb7126;
+	border-color: #cb6220;
+	color: #000;
+	appearance: button;
+}
+
+.btn-fsek:hover {
+	background-color: #cb6220;
+}
+
+.btn-fsek-disabled {
+	outline-color: #eb7126;
+	background-color: #d49167;
+	border-color: #cb6220;
+	color: #444444;
+	appearance: button;
+}
+.btn-fsek-disabled:hover {
+	outline-color: #eb7126;
+	background-color: #d49167;
+	border-color: #cb6220;
+	color: #444444;
+	appearance: button;
+	cursor: not-allowed;
+}
