@@ -26,6 +26,7 @@
 					class="dropdown-content menu bg-base-100 rounded-box z-1 w-40 p-2 shadow-sm"
 				>
 					<a class="btn" href="/admin/manual">{m.nav_admin_manual()}</a>
+					<a class="btn" href="/admin/list">{m.nav_admin_list()}</a>
 				</ul>
 			</div>
 		{/if}
