@@ -1,6 +1,6 @@
 # Whitelist
 
-This is a web app and service allowing users to whitelist themselves on our Minecraft server. Users sign in using their D-sek account and can then connect their Minecraft username, which is checked against Mojangs public API. Every ten minutes, the service creates a whitelist.json file, which can be synced into the server folder of the Minecraft server using cron.
+This is a web app and service allowing users to whitelist themselves on our Minecraft server. Users sign in using their D-sek account and can then connect their Minecraft username, which is checked against Mojangs public API. Every ten minutes, the service creates a `whitelist.json` file, which can be synced into the server folder of the Minecraft server using cron.
 
 ![builtwith][builtwith]
 [![svelte][svelte]][svelte-url]
@@ -16,9 +16,9 @@ This is a web app and service allowing users to whitelist themselves on our Mine
 
 ## Usage
 
-Create a .env file, follwing the example values in the .env.example file.
+Create a `.env` file, following the example values in the `.env.example` file.
 
-The output file is written to ./output/whitelist.json
+The output file is written to `./output/whitelist.json`
 
 ## Developing
 
