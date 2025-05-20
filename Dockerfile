@@ -11,6 +11,8 @@ RUN pnpm install
 RUN pnpm run build
 RUN pnpm drizzle-kit migrate --config=src/lib/server/db/drizzle.config.ts
 
+RUN mkdir /app/db
+
 EXPOSE 3000
 VOLUME [ "/app/output" ]
 
