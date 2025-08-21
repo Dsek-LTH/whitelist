@@ -1,5 +1,8 @@
 FROM node:lts-alpine
 
+RUN apk update && apk upgrade
+RUN apk add --no-cache sqlite
+
 RUN corepack enable
 
 WORKDIR /app
@@ -8,11 +11,11 @@ COPY pnpm-lock.yaml ./
 ADD . ./
 RUN pnpm install
 
-RUN pnpm drizzle-kit push --config=src/lib/server/db/drizzle.config.ts
-RUN pnpm drizzle-kit migrate --config=src/lib/server/db/drizzle.config.ts
-RUN pnpm run build
-
 RUN mkdir /app/db
+RUN sqlite3 ./db/sqlite.db
+
+RUN pnpm drizzle-kit push --config=src/lib/server/db/drizzle.config.ts
+RUN pnpm run build
 
 EXPOSE 3000
 VOLUME [ "/app/output" ]
