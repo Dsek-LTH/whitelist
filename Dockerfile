@@ -8,7 +8,7 @@ COPY pnpm-lock.yaml ./
 ADD . ./
 RUN pnpm install
 
-RUN pnpm drizzle-kit generate --config=src/lib/server/db/drizzle.config.ts
+RUN pnpm drizzle-kit push
 RUN pnpm drizzle-kit migrate --config=src/lib/server/db/drizzle.config.ts
 RUN pnpm run build
 
