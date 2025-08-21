@@ -40,7 +40,7 @@
 					>{m.nav_signin_dsek()}</span
 				>
 			</SignIn>
-			<!--<SignIn provider="keycloak">
+			<!--<SignIn provider="authentik">
 			<span class="btn btn-lg btn-fsek m-1" slot="submitButton"
 				>--><button
 				><span class="btn btn-lg btn-fsek-disabled btn-fsek m-1"

@@ -12,6 +12,7 @@ node_modules
 /out
 /output
 /src/lib/server/db/sqlite.db
+/db/sqlite.db
 
 # OS
 .DS_Store
