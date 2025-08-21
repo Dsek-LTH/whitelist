@@ -8,8 +8,8 @@ COPY pnpm-lock.yaml ./
 ADD . ./
 RUN pnpm install
 
-RUN pnpm run build
 RUN pnpm drizzle-kit migrate --config=src/lib/server/db/drizzle.config.ts
+RUN pnpm run build
 
 RUN mkdir /app/db
 
