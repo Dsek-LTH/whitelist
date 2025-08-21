@@ -1,5 +1,6 @@
 import { SvelteKitAuth, type DefaultSession } from '@auth/sveltekit';
 import Keycloak, { type KeycloakProfile } from '@auth/sveltekit/providers/keycloak';
+import Authentik, { type AuthentikProfile } from '@auth/sveltekit/providers/authentik';
 import * as dotenv from 'dotenv';
 
 dotenv.config();
@@ -38,6 +39,18 @@ export const {
 					userId: profile.preferred_username,
 					name: profile.name,
 					group_list: profile['group_list'] ?? []
+				};
+			}
+		}),
+		Authentik({
+			clientId: process.env.AUTH_AUTHENTIK_ID,
+			clientSecret: process.env.AUTH_AUTHENTIK_SECRET,
+			issuer: process.env.AUTH_AUTHENTIK_ISSUER,
+			profile: (profile: AuthentikProfile) => {
+				return {
+					userId: profile.preferred_username,
+					name: profile.name,
+					group_list: profile['groups'] ?? []
 				};
 			}
 		})

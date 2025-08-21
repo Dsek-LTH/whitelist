@@ -12,7 +12,7 @@
 			{m.home_info()}
 		</p>
 		{#if !data.session}
-			<SignIn provider="keycloak">
+			<SignIn provider="authentik">
 				<span class="btn btn-lg btn-dsek m-1" slot="submitButton"
 					><span class="size-6"
 						><svg focusable="false" aria-hidden="true">
