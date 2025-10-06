@@ -3,13 +3,10 @@ import { fail, redirect, type Actions } from '@sveltejs/kit';
 import { eq } from 'drizzle-orm';
 import { db } from '$lib/server/db/client';
 import { usernames } from '$lib/server/db/schema';
-import { usernamesSchema } from '$lib/server/schema';
+import { stilIdSchema, usernamesSchema } from '$lib/server/schema';
 import { addPlayer } from '$lib/server/addPlayer';
 
-let userId: string;
-let mcName: string;
-
-async function getMcName() {
+async function getMcName(userId: string) {
 	return db
 		.select({ mcname: usernames.mcname })
 		.from(usernames)
@@ -19,6 +16,7 @@ async function getMcName() {
 
 export const load: PageServerLoad = async (event) => {
 	const session = await event.locals.auth();
+	let userId: string;
 
 	if (!session?.user) {
 		redirect(302, '/unauthorized');
@@ -26,7 +24,7 @@ export const load: PageServerLoad = async (event) => {
 		userId = session.user.userId;
 	}
 
-	mcName = (await getMcName())?.mcname as string;
+	const mcName = (await getMcName(userId))?.mcname as string;
 
 	return {
 		session,
@@ -38,9 +36,10 @@ export const actions = {
 	default: async ({ request }) => {
 		const data = await request.formData();
 		const mcNameInput = usernamesSchema.safeParse(data.get('mcName'));
+		const userIdInput = stilIdSchema.safeParse(data.get('userId'));
 
 		if (mcNameInput.success) {
-			return addPlayer(userId, mcNameInput.data);
+			return addPlayer(userIdInput.data!, mcNameInput.data);
 		} else {
 			return fail(500, {
 				errorMessage: mcNameInput.error.format()._errors[0]

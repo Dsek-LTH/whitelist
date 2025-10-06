@@ -44,4 +44,5 @@
 			</div>
 		{/if}
 	</div>
+	<input type="text" hidden name="userId" value={data.session.user.userId} />
 </form>
