@@ -13,7 +13,7 @@
   "whitelist_title": "Enter Minecraft username",
   "whitelist_playername": "Playername",
   "whitelist_save": "Save",
-  "whitelist_noteMsg": "Please note that it can take up to 15 minutes for changes to be reflected on the server.",
+  "whitelist_noteMsg": "Please note that the server only updates the whitelist every 5 minutes. (*/5 * * * *)",
   "whitelist_noteNumber": "The name gets linked to your StiL-id. Note that you cannot have multiple accounts whitelisted at the same time.",
   "whitelist_override": "Entering a username here will overwrite the username possibly entered by the user.",
   "whitelist_errorConnection": "Could not fetch user from Mojang services. If the issue persists, please try again later.",

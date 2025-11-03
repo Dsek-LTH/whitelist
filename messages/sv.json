@@ -13,7 +13,7 @@
   "whitelist_title": "Ange Minecraft-spelarnamn",
   "whitelist_playername": "Spelarnamn",
   "whitelist_save": "Spara",
-  "whitelist_noteMsg": "Notera att det kan ta upp till 15 minuter för ändringarna att verkställas på servern.",
+  "whitelist_noteMsg": "Notera att servern endast uppdaterar listan var 5:e minut. (*/5 * * * *)",
   "whitelist_noteNumber": "Namnet kopplas till ditt StiL-id. Observera att du inte kan ha flera konton whitelistade samtidigt.",
   "whitelist_override": "Att ange ett användarnamn här kommer att skriva över det namn användaren eventuellt fyllt i själv.",
   "whitelist_errorConnection": "Kunde inte hämta användaren från Mojangs servrar. Om felet kvarstår, försök igen senare.",
