@@ -1,8 +1,9 @@
-FROM node:lts-alpine
+FROM node:current-alpine
 
 RUN apk update && apk upgrade
 RUN apk add --no-cache sqlite
 
+RUN npm install --global --force corepack@latest
 RUN corepack enable
 
 WORKDIR /app
