@@ -30,7 +30,7 @@ pnpm dev
 
 ## Building and deploying
 
-In production, the web app runs in a Docker (Podman) container. To build an image, use the followning command.
+In production, the web app runs in a Docker (Podman) container. To build an image, move the `.env.example` file to `.env` (needed at build, values do not matter), and then use the following command.
 
 ```bash
 docker build .
