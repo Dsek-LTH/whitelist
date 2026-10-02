@@ -1,7 +1,9 @@
 FROM node:26-slim
 
-RUN apk update && apk upgrade
-RUN apk add --no-cache sqlite
+RUN apt-get update \
+  && apt-get install --yes --no-install-recommends sqlite3 \
+  && rm -rf /var/lib/apt/lists/* \
+  && npm install --global pnpm@9.14.4
 
 RUN npm install --global --force corepack@latest
 RUN corepack enable
