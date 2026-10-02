@@ -1,4 +1,4 @@
-FROM node:current-alpine
+FROM node:26-slim
 
 RUN apk update && apk upgrade
 RUN apk add --no-cache sqlite
